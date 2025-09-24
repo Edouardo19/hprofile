@@ -6,13 +6,17 @@
 # For more information see: https://github.com/actions/setup-java/blob/main/docs/advanced-usage.md#Publishing-using-gradle
 
 name: Gradle Package
-
+# test
 on:
   release:
     types: [created]
-  push:
+
+  pull_request:
      branches:
        - main
+  # push:
+  #    branches:
+  #      - main
 jobs:
   build:
 
